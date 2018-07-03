@@ -7,7 +7,7 @@ A data generator for studying learning with weak supervision.  The two primary c
 1. The data generator for the All-Pairs problem.  The purpose of this dataset is to explore the limits of learning with weak supervision.  Samples can be generated on the fly during training, an example is provided.
 1. The Type-Net model which can be more easily trained to solve the All-Pairs problem than conventional vision models.
 
-See the accompanying paper on arXiv for details: A New Benchmark and Progress Toward Improved Weakly Supervised Learning
+See the accompanying paper on arXiv for details: [A New Benchmark and Progress Toward Improved Weakly Supervised Learning](https://arxiv.org/abs/1807.00126)
 
 Code is parameterized with argparse, so see individual files for details of configurations.  
 
