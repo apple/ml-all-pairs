@@ -77,3 +77,16 @@ python train-pytorch-simple.py
 python train-pytorch.py --num-classes=4 --num-pairs=4
 ```
 
+### Example Results
+
+To see the results of training the 4-4 All-Pairs problem, run the commands below:
+
+```
+python train-pytorch-simple.py | tee examples/results.txt
+cd examples
+python plot_results.py
+```
+We plot the maximum validation accuracy because the batch norm moving statistics (used in validation) are often wrong as the weights change.
+
+<img alt="All-Pairs example" src="examples/training-4-4.png?raw=true" width="400">
+
