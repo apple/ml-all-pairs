@@ -40,7 +40,7 @@ parser.add_argument('--reset-every', type=str, default="", help='reset generator
 # Model parameters
 parser.add_argument('--batch-size', type=int, default=400, metavar='N',
                     help='input batch size for training (default: 400)')
-parser.add_argument('--activations', nargs='+', 
+parser.add_argument('--activations', nargs='+',
                     help='list of activations', default=['softmax', 'softmax'], type=str)
 parser.add_argument('--lr', type=float, default=1e-3,
                     help='learning rate (default: 1e-3)')
@@ -235,7 +235,6 @@ def run():
                         ],
                         path=args.filelog,
                         file_prefix=short_name,
-                        args=args
                     )
         logger.set_info('note', args.note)
         logger.set_info('uuid', logger.uuid)
