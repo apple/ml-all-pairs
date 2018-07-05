@@ -174,6 +174,8 @@ def test(epoch, model, data_loader, logger, loss_function=nnf.cross_entropy):
         logger.record('test', 'acc', correct_percent / 100.0)
         logger.new_row('test')
 
+    return correct_percent
+
 
 def get_data_loader():
     """ helper to return the data loader """
