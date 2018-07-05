@@ -1,5 +1,5 @@
 # after running
-# python train-pytorch-simple.py | tee results.txt 
+# python train-pytorch-simple.py | tee results.txt
 # this script will plot the validation accuracy
 
 import numpy as np
@@ -18,7 +18,7 @@ with open('results.txt') as f:
 
 acc = np.asarray(acc)
 x = [i*50000/1e6 for i in range(1, len(acc))]
-y = [np.amax(acc[:i])/100.0 for i in range(1, len(acc))]
+y = [np.amax(acc[:i]) for i in range(1, len(acc) + 1)]
 plt.plot(x, y)
 plt.xlabel('cumulative samples seen in training (M)')
 plt.ylabel('validation accuracy')
