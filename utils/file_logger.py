@@ -26,7 +26,7 @@ def rand_id(num_syllables=2, num_parts=3):
 # source_list: a list of files to save to the results directory
 # log_def: definition of the logging { 'log_name1': [ keys ], 'log_name2': [ keys ], ...}
 class FileLogger:
-    def __init__(self, log_def, description='', source_list=(), path="results/", include_wall_time=True, file_prefix=''):
+    def __init__(self, log_def, description='', source_list=(), path="results/", include_wall_time=True, file_prefix='', args=None):
         self.uuid = rand_id()
         self.dest_path = path
         self.description = description
