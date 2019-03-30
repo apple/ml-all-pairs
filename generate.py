@@ -1,3 +1,7 @@
+#
+# For licensing see accompanying LICENSE.txt file.
+# Copyright (C) 2018-2019 Apple Inc. All Rights Reserved.
+#
 from __future__ import print_function
 import sys
 import argparse
@@ -32,12 +36,11 @@ def progress(i, max_plus_one):
 def run():
     f = open(args.csv, 'w')
     spec = SampleSpec(args.num_pairs, args.num_classes, im_dim=args.pixels, min_cell=15, max_cell=18)
-    ground_truth = []
     for i in range(args.num):
         progress(i, args.num)
         images, labels, stats = spec.blocking_generate_with_stats(1)
         outpath = os.path.join(args.dest, '{}.png'.format(str(i).zfill(6)))
-	scipy.misc.imsave(outpath, images[0, 0, :, :])
+        scipy.misc.imsave(outpath, images[0, 0, :, :])
         f.write(str(labels[0]))
         f.write('\n')
 

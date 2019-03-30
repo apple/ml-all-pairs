@@ -1,3 +1,7 @@
+#
+# For licensing see accompanying LICENSE.txt file.
+# Copyright (C) 2018-2019 Apple Inc. All Rights Reserved.
+#
 import numpy as np
 from hashlib import sha256
 

@@ -1,3 +1,7 @@
+#
+# For licensing see accompanying LICENSE.txt file.
+# Copyright (C) 2018-2019 Apple Inc. All Rights Reserved.
+#
 from shutil import copyfile
 import copy
 import os
